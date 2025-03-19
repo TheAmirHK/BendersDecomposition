@@ -37,7 +37,7 @@ $theta \geq \text{Benders' Cuts} \quad (\text{computed iteratively from subprobl
 
 ## Subproblem (Solving for \( y \) given \( x \))
 <div align="center">
-
+  
 $min_{y} \quad d^T y$
 
 *S.t.*
@@ -47,3 +47,23 @@ $By \geq b - Ax, \quad y \in Y$
 
 - The subproblem is continuous and easier to solve than the full problem.
 - The dual solution of the subproblem generates Benders' cuts, which refine the master problem.
+
+## Example
+I provided an example here and you can find the application of the method for this very example in the attached code.
+
+<div align="center">
+  
+$min_{x,y} \quad 3x_1 + 22x_2 + y_1 + 7y_2 + 9y_3$
+  
+*S.t.*
+
+$x_1 + x_2 + y_1 - 2y_3 \geq 15$
+
+$x_2 + y_1 + 7y_2 \geq 8$
+
+$x \in Z^+$
+
+$y \in R^+$
+
+</div>
+
